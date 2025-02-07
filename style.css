@@ -1,0 +1,183 @@
+/* Default Theme */
+:root {
+    --background-color: rgb(255, 251, 251);
+    --text-color: rgb(0, 0, 0);
+    --accent-color: rgb(100, 100, 100);
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+.header {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+}
+
+.pros {
+    color: rgb(38, 179, 10);
+}
+
+.cons {
+    color: rgb(255, 38, 0);
+}
+p {
+    margin-bottom: 20px;
+}
+h1,
+h2 {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Theme Toggle Button */
+button#theme-toggle-btn {
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 6px 10px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+button#theme-toggle-btn img {
+    width: 22px;
+}
+
+button#theme-toggle-btn:hover {
+    background-color: rgba(100, 100, 100, 0.1);
+}
+
+/* Dark Theme */
+.dark-theme {
+    --background-color: rgb(36, 35, 35);
+    --text-color: rgb(201, 199, 199);
+    --accent-color: rgb(150, 150, 150);
+}
+
+/* Main Section */
+main {
+    padding: 40px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.intro-text {
+    max-width: 55%;
+}
+
+.intro-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.intro h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Horizontal Rule */
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--accent-color);
+    margin: 30px 0;
+}
+
+/* Continue Section */
+.continue {
+    margin-top: 50px;
+}
+
+.continue img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.continue p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.continue ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.continue ul li {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+/* GSAP Scroll Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

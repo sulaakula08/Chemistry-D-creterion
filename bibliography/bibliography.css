@@ -1,0 +1,145 @@
+:root {
+    --background-color: rgb(255, 251, 251);
+    --text-color: rgb(0, 0, 0);
+    --accent-color: rgb(100, 100, 100);
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+.header {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+}
+button#theme-toggle-btn {
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 6px 10px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+button#theme-toggle-btn img {
+    width: 22px;
+}
+
+button#theme-toggle-btn:hover {
+    background-color: rgba(100, 100, 100, 0.1);
+}
+
+/* Dark Theme */
+.dark-theme {
+    --background-color: rgb(36, 35, 35);
+    --text-color: rgb(201, 199, 199);
+    --accent-color: rgb(150, 150, 150);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme main {
+    background: rgba(50, 50, 50, 0.8);
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Bibliography List */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+ul li a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 1.2rem;
+    background: var(--background-color);
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+/* Scroll Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
