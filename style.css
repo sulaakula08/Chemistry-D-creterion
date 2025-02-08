@@ -62,6 +62,13 @@ a {
 a:hover {
     text-decoration: underline;
 }
+img.intro-logo {
+    width: 700px;
+}
+
+img {
+    cursor: pointer;
+}
 
 .nav a {
     text-decoration: none;
@@ -180,4 +187,119 @@ hr {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--text-color);
+    transition: 0.3s;
+}
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    img.intro-img {
+        width: 170px; /* Делаем компактнее */
+    }
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro-text {
+        max-width: 90%;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .nav {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 25%;
+        background: var(--background-color);
+        width: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .burger-menu.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .intro-text h1 {
+        font-size: 20px;
+    }
+
+    .continue img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .intro {
+        padding: 10px;
+    }
+
+    .intro-text h1 {
+        font-size: 18px;
+    }
+
+    .intro-text p {
+        font-size: 13px;
+    }
+
+    .continue {
+        padding: 10px;
+    }
+
+    .continue h2 {
+        font-size: 18px;
+    }
+
+    .continue h3 {
+        font-size: 16px;
+    }
+
+    .continue p {
+        font-size: 13px;
+    }
 }

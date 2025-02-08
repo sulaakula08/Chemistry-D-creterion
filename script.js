@@ -83,3 +83,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // 🛠 Fix GSAP ScrollTrigger issues
     ScrollTrigger.refresh(); // Ensures animations run correctly after page load
 });
+
+const burgerMenu = document.querySelector(".burger-menu");
+const nav = document.querySelector(".nav");
+
+burgerMenu.addEventListener("click", () => {
+    burgerMenu.classList.toggle("active");
+    nav.classList.toggle("active");
+});
